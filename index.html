@@ -1,0 +1,145 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/flexbox.css" rel="stylesheet">
+    <title>P2 WEB</title>
+  </head>
+  <body>
+          <section class="navnav">
+                  <nav id="home-nav">
+                    <div class="center">
+                      <ul>
+                          <li><a class="button-nav" href="index.html">Home</a></li>
+                          <li><a class="button-nav" href="productspage.html">Products</a>
+                          <li><a class="button-nav" href="#">About</a></li>
+                          <li><a class="button-nav" href="#">Cart</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+        </section>
+
+        <section id="carrousel-1">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="carousel fade">
+              <div class="numbertext">1 / 3</div>
+              <div class="text">NEW MECHANICAL KEYBOARD</div>
+              <img src="https://mms.businesswire.com/media/20200714005896/en/805435/5/RazerPhoto.jpg?download=1" style="width:100%">
+            </div>
+            <div class="carousel  fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="https://mms.businesswire.com/media/20200714005896/en/805435/5/RazerPhoto.jpg?download=1" style="width:100%">
+              <!--<div class="text">Caption Text</div>-->
+            </div>
+            <div class="carousel  fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="https://mms.businesswire.com/media/20200714005896/en/805435/5/RazerPhoto.jpg?download=1" style="width:100%">
+              <!--<div class="text">Caption Text</div>-->
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+          <div class="button-center">
+
+          </div>
+          <div class="button-center">
+            <a class="button" href="productspage.html">LEARN MORE</a>
+          </div>
+        </section>
+
+        <section id="featured">
+          <div class="featured-parent-high">
+            <div class="featured-parent">
+              <div class="featured-child">
+                  <h2> ULTIMATE PRECISION </h2>
+                  <h4> Accurate and feature rich gaming mouse</h4>
+                  <img src="images/placebo.png" alt="mouse">
+                  <div class="button-center">
+                    <a class="button" href="#">Learn More</a>
+                    <a class="button" href="#">Buy</a>
+                  </div>
+              </div>
+
+              <div class="featured-child">
+                  <h2> THE SOUND OF ESPORTS</h2>
+                  <h4> Check out our new competitive noise cancelling headphones</h4>
+                  <img src="images/placebo.png" alt="headphone">
+                  <div class="button-center">
+                    <a class="button" href="#">Learn More</a>
+                    <a class="button" href="#">Buy</a>
+                  </div>
+              </div>
+            </div>
+        </section>
+
+        <section id="footer">
+
+        <section>
+          <div class="support-parent">
+                <div class="support-child">
+                  <h4>Services</h4>
+                  <h5><a href="#">Contact Us</a></h5>
+                  <h5><a href="#">Live Chat</a></h5>
+                </div>
+                <div class="support-child">
+                  <h4>About Us</h4>
+                  <h5><a href="#">About Us</a></h5>
+                  <h5><a href="#">News</a></h5>
+                </div>
+                <div class="support-child">
+                  <h4>SIGN UP FOR MORE UPDATES</h4>
+                  <form> <input type="text" name="Text Input Field" value="Email Address" > </form>
+                  <a href="#"  class="sub-button" role="button">SUBMIT</a>
+                </div>
+          </div>
+            <a href="citations.html">Citations</a>
+        </section>
+        </section>
+
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          // Next/previous controls
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          // Thumbnail image controls
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("carousel");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+        </script>
+
+  </body>
+</html>
